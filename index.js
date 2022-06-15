@@ -13,7 +13,7 @@ const client = new Discord.Client({
 
 let bot = {
     client,
-    prefix: "s-",
+    prefix: "s!",
     owners : ["253837139031097344"]
 }
 
@@ -36,8 +36,9 @@ module.exports = bot
 // })
 
 // client.on("messageCreate", (message) => {
-//     if (message.content == "hi"){
-//         message.reply("Hello World!")
+//     if(!message.content.startsWith(bot.prefix)) return
+//     if (message.content == bot.prefix + "shutdown"){
+//         client.destroy()
 //     }
 // })
 
